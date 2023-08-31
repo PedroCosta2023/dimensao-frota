@@ -1,10 +1,10 @@
 package gestao;
 
 public class TotalCargaMensal {
-    public TotalCargaMensal(String tipo, double peso) {
-        this.tipo = tipo;
-        this.peso = peso;
-    }
+    public static final int DIAS_MES = 30;
+    private String tipo;
+    private double peso;
+    private double viagensMensais;
 
     public String getTipo() {
         return tipo;
@@ -22,6 +22,8 @@ public class TotalCargaMensal {
         this.peso = peso;
     }
 
-    private String tipo;
-    private double peso;
+    public double calcularViagensMensais(){
+        viagensMensais = peso/DIAS_MES;
+        return viagensMensais;
+    }
 }
